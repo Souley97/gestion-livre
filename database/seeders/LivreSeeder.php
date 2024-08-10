@@ -2,19 +2,20 @@
 
 namespace Database\Seeders;
 
-use App\Models\Categorie;
+use App\Models\Livre;
 use Illuminate\Database\Seeder;
-use Database\Factories\CategorieFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class CategorieSeeder extends Seeder
+
+class LivreSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Categorie::factory(8)->create();
 
+        Livre::factory(10)->create();
     }
 }

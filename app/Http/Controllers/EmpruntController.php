@@ -2,24 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCategorieRequest;
-use App\Http\Requests\UpdateCategorieRequest;
-use App\Models\Categorie;
+use App\Http\Requests\StoreEmpruntRequest;
+use App\Http\Requests\UpdateEmpruntRequest;
+use App\Models\Emprunt;
 
-class CategorieController extends Controller
+class EmpruntController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $livres = Catgorie::all();
-        return response()->json( [
-            'message' => 'Liste des livres  avec succés ',
-            'livres' => $livres,
-        ], 200 );
-
-
+        //
     }
 
     /**
@@ -33,7 +27,7 @@ class CategorieController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategorieRequest $request)
+    public function store(StoreEmpruntRequest $request)
     {
         //
     }
@@ -41,7 +35,7 @@ class CategorieController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Categorie $categorie)
+    public function show(Emprunt $emprunt)
     {
         //
     }
@@ -49,7 +43,7 @@ class CategorieController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categorie $categorie)
+    public function edit(Emprunt $emprunt)
     {
         //
     }
@@ -57,7 +51,7 @@ class CategorieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategorieRequest $request, Categorie $categorie)
+    public function update(UpdateEmpruntRequest $request, Emprunt $emprunt)
     {
         //
     }
@@ -65,7 +59,7 @@ class CategorieController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categorie $categorie)
+    public function destroy(Emprunt $emprunt)
     {
         //
     }

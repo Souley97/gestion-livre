@@ -4,15 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Livre;
 
-class Categorie extends Model
+class Emprunt extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-    public function livres()
+    public function livre()
     {
-        return $this->hasMany(Livre::class);
+        return $this->belongsTo(Livre::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

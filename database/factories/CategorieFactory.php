@@ -14,15 +14,18 @@ class CategorieFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
-    {
+
+
+        public function definition(): array
+        {
+            $categories = [
+                'Roman', 'Poésie', 'Science-fiction', 'Histoire', 'Biographie', 'Philosophie', 'Religion', 'Art', 'Théâtre', 'Économie', 'Politique', 'Sociologie'
+            ];
+            
         return [
 
 
-            // custom fields
-
-
-            'nom' => $this->faker->sentence(3),
+            'nom' => $this->faker->randomElement($categories),
             'description' => $this->faker->text(200),
             'created_at' => now(),
             'updated_at' => now(),

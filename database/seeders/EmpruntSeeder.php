@@ -2,19 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Categorie;
+use App\Models\Emprunt;
 use Illuminate\Database\Seeder;
-use Database\Factories\CategorieFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class CategorieSeeder extends Seeder
+class EmpruntSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Categorie::factory(8)->create();
+        Emprunt::factory(10)->create();
 
     }
 }
